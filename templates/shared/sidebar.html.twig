@@ -1,12 +1,12 @@
 {% import _self as sidebar %}
 {% import 'icons.html.twig' as icons %}
 
-<aside class="fixed top-0 left-0 h-screen w-64 m-0 bg-zinc-900 text-white shadow-lg p-4 text-zinc-400">
+<aside class="fixed top-0 left-0 h-screen w-64 m-0 bg-zinc-900 shadow-lg p-4">
     <div class="pb-4">
         <h1 class="text-4xl px-4">Sidebar</h1>
     </div>
     <div class="flex items-center h-12 bg-zinc-800 px-4 rounded-lg">
-        <span class="text-zinc-400">{{ icons.search }}</span>
+        <span>{{ icons.search }}</span>
         <input type="text" placeholder="search" class="ml-4 w-full bg-transparent outline-none border-none">
     </div>
     <hr class="my-4 border-zinc-800">
@@ -20,30 +20,30 @@
 </aside>
 
 {% macro item(icon, text = 'Placeholder') %}
-    <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+    <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
         <span class="pr-4">{{ icon }}</span>
         <span class="w-full">{{ text }}</span>
     </a>
 {% endmacro %}
 
 {% macro items(icon, text = 'Placeholder') %}
-    <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+    <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
         <span class="pr-4">{{ icon }}</span>
         <span class="w-full">{{ text }}</span>
         <span class="flex justify-end">{{ icons.chevron_down }}</span>
     </a>
     <div class="pl-6">
         <div class="border-l border-zinc-800 pl-6">
-            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
                 <span class="w-full">Courses</span>
             </a>
-            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
                 <span class="w-full">Categories</span>
             </a>
-            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
                 <span class="w-full">Instructors</span>
             </a>
-            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg text-zinc-400">
+            <a href="#" class="flex items-center h-12 hover:bg-zinc-800 px-4 rounded-lg">
                 <span class="w-full">Video Library</span>
             </a>
         </div>
